@@ -8,13 +8,17 @@ node{
     }
     
     stage('image build') {
-    sh 'sudo docker build -t monimage .'
+    sh 'sudo docker build -t steevdev7/my-private-repo:2.0 .'
     }
     //stage('Contenair app') {
     //sh 'sudo docker run -d -p 29:2222 --name monconteanair monimage'
     //}
+    
     stage('push dockerhub') {
-    sh 'sudo docker tag monimage steevdev7/my-private-repo:2.0'
+    
+    withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
+        sh 'docker login -u steevdev7 -p ${dockerhub}'
+    }
     sh 'sudo docker push steevdev7/my-private-repo:2.0'
 
     }
