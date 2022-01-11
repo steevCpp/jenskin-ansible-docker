@@ -10,8 +10,8 @@ node{
     stage('Contenairisation') {
     sh 'sudo docker build -t monimage .'
     }
-    */ stage('Deploiement') {
-    #ansiblePlaybook become: true, inventory: 'hosts', playbook: 'playbook.yml'
-    }  */
+    // stage('Deploiement') {
+    // ansiblePlaybook become: true, inventory: 'hosts', playbook: 'playbook.yml'
+    // }  
     
     }
