@@ -1,1 +1,13 @@
 
+---
+- name: copy Dockerfile
+  hosts: all
+  become: yes
+  vars:
+    source : Dockerfile
+    destination : /usr/ubuntu
+  tasks:
+   - name: copy
+     copy:
+       src: "{{ source }}"
+       dest: "{{ destination }}"
