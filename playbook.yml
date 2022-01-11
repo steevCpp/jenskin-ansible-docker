@@ -5,7 +5,7 @@
   become: yes
   vars:
     source : Dockerfile
-    destination : /usr/ubuntu
+    destination : var=ansible_env.HOME
   tasks:
    - name: copy
      copy:
