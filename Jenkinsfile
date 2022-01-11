@@ -13,6 +13,11 @@ node{
     stage('Contenair app') {
     sh 'sudo docker run -d -p 29:2222 --name monconteanair monimage'
     }
+    stage('push dockerhub') {
+    sh 'sudo docker --tag monimage steevdev7/my-private-repo:2.0'
+    sh 'sudo docker push '
+
+    }
     // stage('Deploiement') {
     // ansiblePlaybook become: true, inventory: 'hosts', playbook: 'playbook.yml'
     // }  
