@@ -1,6 +1,6 @@
 node{
     stage('clone') {
-    git 'https://github.com/steevCpp/jenkins-ansible.git'
+    git 'https://github.com/steevCpp/jenskin-ansible-docker'
     }
     
     stage('Build') {
