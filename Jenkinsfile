@@ -11,7 +11,7 @@ node{
     sh 'sudo docker build -t monimage .'
     }
     stage('Contenair app') {
-    sh 'sudo docker run -d -p 222 --name monconteanair monimage'
+    sh 'sudo docker run -d -p 29:2222 --name monconteanair monimage'
     }
     // stage('Deploiement') {
     // ansiblePlaybook become: true, inventory: 'hosts', playbook: 'playbook.yml'
