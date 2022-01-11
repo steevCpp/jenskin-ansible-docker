@@ -18,8 +18,10 @@ node{
     
     withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) {
         sh 'docker login -u steevdev7 -p ${dockerhub}'
+        sh 'sudo docker push steevdev7/my-private-ripo:2.0'
     }
-    sh 'sudo docker push steevdev7/my-private-ripo:2.0'
+    
+    
 
     }
     // stage('Deploiement') {
