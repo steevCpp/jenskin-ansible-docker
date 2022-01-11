@@ -10,9 +10,9 @@ node{
     stage('image build') {
     sh 'sudo docker build -t monimage .'
     }
-    stage('Contenair app') {
-    sh 'sudo docker run -d -p 29:2222 --name monconteanair monimage'
-    }
+    //stage('Contenair app') {
+    //sh 'sudo docker run -d -p 29:2222 --name monconteanair monimage'
+    //}
     stage('push dockerhub') {
     sh 'sudo docker --tag monimage steevdev7/my-private-repo:2.0'
     sh 'sudo docker push '
