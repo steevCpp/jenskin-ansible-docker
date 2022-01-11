@@ -7,8 +7,11 @@ node{
     sh 'mvn clean install package'
     }
     
-    stage('Contenairisation') {
+    stage('image build') {
     sh 'sudo docker build -t monimage .'
+    }
+    stage('Contenair app') {
+    sh 'sudo docker run -d -p 222 --name monconteanair monimage'
     }
     // stage('Deploiement') {
     // ansiblePlaybook become: true, inventory: 'hosts', playbook: 'playbook.yml'
