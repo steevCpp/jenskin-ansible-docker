@@ -8,7 +8,7 @@ node{
     }
     
     stage('image build') {
-    sh 'sudo docker build -t steevdev7/my-private-repo:2.0 .'
+    sh 'sudo docker build -t steevdev7/my-private-ripo:2.0 .'
     }
     //stage('Contenair app') {
     //sh 'sudo docker run -d -p 29:2222 --name monconteanair monimage'
