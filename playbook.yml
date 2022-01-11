@@ -3,11 +3,8 @@
 - name: copy Dockerfile
   hosts: all
   become: yes
-  vars:
-    source : Dockerfile
-    destination : var=ansible_env.HOME
   tasks:
-   - name: copy
-     copy:
-       src: "{{ source }}"
-       dest: "{{ destination }}"
+  - name: install docker
+    apt: 
+      
+      
